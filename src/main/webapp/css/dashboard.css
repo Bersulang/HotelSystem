@@ -1,0 +1,139 @@
+/* 优化后的控制面板样式 */
+.quick-links {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+}
+
+.link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+}
+
+.quick-link {
+    padding: 1rem 0.8rem;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.quick-link:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.quick-link i {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+}
+
+.link-rooms {
+    background: linear-gradient(135deg, #4dabf7 0%, #1971c2 100%);
+}
+
+.link-bookings {
+    background: linear-gradient(135deg, #51cf66 0%, #2b8a3e 100%);
+}
+
+.link-users {
+    background: linear-gradient(135deg, #fcc419 0%, #e67700 100%);
+}
+
+.recent-section {
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.2rem;
+}
+
+.recent-section h2 {
+    margin-bottom: 0.8rem;
+    color: #1a3365;
+    font-size: 1.2rem;
+}
+
+.recent-item {
+    padding: 0.6rem;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.95rem;
+}
+
+.recent-item:last-child {
+    border-bottom: none;
+}
+
+.recent-item .date {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.view-all {
+    display: block;
+    text-align: center;
+    margin-top: 0.8rem;
+    color: #1a3365;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
+@media (max-width: 992px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 统计卡片样式 */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 0.8rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #1a3365;
+}
+
+.stat-number {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #333;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: #6c757d;
+}

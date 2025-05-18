@@ -1,0 +1,62 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">    <display-name>Hotel Booking System</display-name>
+    
+    <!-- 字符编码过滤器 -->
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>com.example.hotel.filters.CharacterEncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- 应用程序启动监听器 - 数据库初始化 -->
+    <listener>
+        <listener-class>com.example.hotel.service.AppInitializationListener</listener-class>
+    </listener>
+
+    <!-- Query Servlet -->
+    <servlet>
+        <servlet-name>QueryServlet</servlet-name>
+        <servlet-class>com.example.hotel.servlets.QueryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QueryServlet</servlet-name>
+        <url-pattern>/query</url-pattern> <!-- 用户访问 /query 或提交表单到 /query -->
+    </servlet-mapping>
+
+    <!-- Selection Servlet -->
+    <servlet>
+        <servlet-name>SelectionServlet</servlet-name>
+        <servlet-class>com.example.hotel.servlets.SelectionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SelectionServlet</servlet-name>
+        <url-pattern>/selectRoom</url-pattern>
+    </servlet-mapping>
+
+    <!-- Confirmation Servlet -->
+    <servlet>
+        <servlet-name>ConfirmationServlet</servlet-name>
+        <servlet-class>com.example.hotel.servlets.ConfirmationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ConfirmationServlet</servlet-name>
+        <url-pattern>/confirmBooking</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+    </welcome-file-list>
+
+</web-app>
