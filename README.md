@@ -1,2 +1,2 @@
 # HotelSystem
-JavaWeb--use: SP+JDBC+Servlet
+JavaWeb:JSP+JDBC+Servlet
